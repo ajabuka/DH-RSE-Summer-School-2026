@@ -1,4 +1,6 @@
+import re
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # TODO Naming: 'f' is not descriptive
 # TODO Inputs: this should be a command-line argument, not hardcoded
@@ -54,9 +56,6 @@ d['duration_hours'] = hrs2
 
 d['cumulative_time'] = d['duration_hours'].cumsum()
 
-# TODO: Import statements should be grouped at the top
-import matplotlib.pyplot as plt
-
 # TODO Naming: 'g' is not descriptive
 # TODO Inputs: graph save location should be a command-line argument, not hardcoded
 g = 'cumulative_eva_graph.png'
@@ -67,9 +66,6 @@ plt.ylabel('Total time spent in space to date (hours)')
 plt.tight_layout()
 plt.savefig(g)
 plt.show()
-
-# TODO: Import statements should be grouped at the top
-import re
 
 # TODO: Unused function - candidate for removal
 # or for wiring into the analysis (left as unused/dead code on purpose)
